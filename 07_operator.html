@@ -37,7 +37,98 @@
       console.log((x /= y)); //x = x / y => x를 출력 3
       console.log((x %= y)); //x = x % y => x를 출력 3
 
-      //
+      //3. 비교 연산지 : 데이터의 값을 비교
+      // > < >= <= === != !==
+      x = 3;
+      console.log(typeof x);
+      y = "3";
+      console.log(typeof y);
+      console.log(x == y); //true, 값비교 => 유연성 => 장점, 단점
+      console.log(x === y); //false, 타입비교
+
+      console.log(x != y); //false
+      console.log(x !== y); //true
+
+      //4. 산술연산자 ++(증가) --(감소) +(숫자화) =(단항부정)
+      x = 5;
+      y = ++x;
+      console.log(x); //6
+      console.log(y); //6
+      x = 5;
+      y = x++;
+      console.log(x); //6
+      console.log(y); //5      //시험문제
+      y = --x;
+      console.log(x); //5
+      console.log(y); //5
+      y = x--;
+      console.log(x); //4
+      console.log(y); //5
+
+      x = -3;
+      console.log(x); //-3
+      console.log(-x); //3   //부호를 바꾸는 역할
+
+      x = "7";
+      y = +x;
+      console.log(typeof x); //String
+      console.log(typeof y); //number3
+      console.log(x); //7
+      console.log(y); //7
+
+      //let num1 = parseInt(prompt("첫번째수 입력"));
+      //let num2 = parseInt(prompt("두번째수 입력"));
+      //console.log(num1 + num2);
+
+      //5. 논리연산자 = 여러조건이 함께 있을때 참인지 거짓인지 판단하는것  ...
+      // &&(and:)둘다 참이어야 참  ||(or:)하나라도 참이면 참  &&이 더 효율성 좋음
+      //연산자 하나짜리를 사용하는 이유 : 첫항만 보고도 판단 가능
+
+      let o = true && false;
+      console.log(o); // false
+
+      o = 3 > 2 && 4 > 7;
+      console.log(o); // false
+
+      o = 3 > 2 && 8 > 7;
+      console.log(o); // true
+
+      o = true || false;
+      console.log(o); // true
+
+      o = 3 > 2 || 4 > 7;
+      console.log(o); // true
+
+      o = 3 > 4 || 4 > 2 || 2 > 1;
+      console.log(o); // true //js에서 가능
+
+      //6. 문자열 연산자 : + (concate)
+      let firstName = "John";
+      let lastName = "Bacon";
+      let fullName = firstName + lastName;
+      console.log(fullName);
+
+      //7. 삼항 연산자 : 조건 ? 참 : 거짓 ;
+      let age = 16;
+      let isAdult = age >= 20 ? "성인" : "미성년자";
+      console.log(isAdult);
+
+      //활용 : 90이상이면 "A", 80이상이면 "B", 70점 이상이면 "C", 60점 이상이면 "D", 아니면 "E"라고 출력하는 코드
+      //=> 반드시 산항연산자 , prompt입력
+
+      let score = parseInt(prompt("점수 입력 : ")); //삼항연산자는 중첩이 가능하다
+      grade =
+        score >= 90
+          ? "A"
+          : score >= 80
+            ? "B"
+            : score >= 70
+              ? "C"
+              : score >= 60
+                ? "D"
+                : "E";
+
+      console.log(grade);
     </script>
   </body>
 </html>

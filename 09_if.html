@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let age = parseInt(prompt("나이를 입력하세요."));
+      let money = 0;
+      if (age) {
+        //age가 존재하면
+        if (age >= 70) {
+          console.log("무료(노인)");
+        } else if (age >= 18) {
+          console.log("1000");
+        } else if (age < 18) {
+          console.log("700");
+        } else if (age < 12) {
+          console.log("450");
+        } else if (age <= 6) {
+          console.log("무료");
+        } else {
+          console.log("나이를 다시 입력해 주십시오.");
+        }
+      }
+      if (age <= 6 || age >= 70) {
+        money = "무료";
+      }
+    </script>
+  </body>
+</html>

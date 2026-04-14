@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //forEach :
+      // - 배열에서 많이 사용
+      // - forEach(함수): 함수가 매개변수로 오는 메서드
+      let brands = ["애플", "구글", "삼성", "아마존", "테슬라"];
+      brands.forEach(function (brand, index) {
+        //index는 꼭 뒤쪽에
+        //선언함수
+        console.log(brand, index);
+      });
+      //실제 활용 => 총점 계산
+      const myScores = [70, 98, 90, 78, 100];
+      let total = 0;
+      let sum = 0;
+      myScores.forEach(function (myScore) {
+        //화살표 함수 myScores.forEach((myScore) => {
+        total += myScore;
+      });
+      console.log("합계 : " + total);
+      sum = total / myScores.length;
+      console.log("평균 : " + sum);
+    </script>
+  </body>
+</html>
